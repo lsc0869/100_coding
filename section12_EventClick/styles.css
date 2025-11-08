@@ -62,7 +62,9 @@ button:hover {
 input.warning {
   background-color: rgb(248, 191, 145);
 }
-
-#remaining-chars.warning {
-  color:rgb(211, 109, 26);
+input.error {
+  background-color: rgb(255, 136, 0);
+}
+#remaining-chars.error {
+  color:rgb(255, 0, 0);
 }

@@ -11,7 +11,21 @@ function updateRemaining(event){
     let remainingCharacters = maxAllowedChars - enteredTextLength;
 
     remainingCharsElement.textContent = remainingCharacters;
-
+    if(remainingCharacters === 0) {
+        remainingCharsElement.classList.add('error');
+        producyNameInputElement.classList.add('error');
+    }
+    else if (remainingCharacters <= 10){
+        remainingCharsElement.classList.add('warning');
+        producyNameInputElement.classList.add('warning');
+        remainingCharsElement.classList.remove('error');
+        producyNameInputElement.classList.remove('error');
+    }
+    
+    else{
+        remainingCharsElement.classList.remove('error', 'warning');
+        producyNameInputElement.classList.remove('error', 'warning');
+    }
 }
 
 
